@@ -1,22 +1,16 @@
-// Mobile Menü öffnen/schließen
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
-// Abstracts auf- und zuklappen
-const abstractButtons = document.querySelectorAll('.toggle-abstract');
-
-abstractButtons.forEach(button => {
+document.querySelectorAll('.toggle-abstract').forEach(button => {
   button.addEventListener('click', () => {
     const abstract = button.nextElementSibling;
     abstract.classList.toggle('visible');
-    if (abstract.classList.contains('visible')) {
-      button.textContent = "Hide Abstract";
-    } else {
-      button.textContent = "Show Abstract";
-    }
+    button.textContent = abstract.classList.contains('visible') ? 'Hide Abstract' : 'Show Abstract';
   });
 });

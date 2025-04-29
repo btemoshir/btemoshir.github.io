@@ -1,13 +1,14 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moshir Harsh</title>
-  <link rel="stylesheet" href="./style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <script defer src="./script.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
@@ -16,13 +17,13 @@
     <p class="subtitle">Researcher | Statistical Physics | Machine Learning</p>
     <div class="icon-links">
       <a href="https://www.linkedin.com/in/moshir-harsh" target="_blank" title="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
+        <i class="fab fa-linkedin"></i>
       </a>
       <a href="mailto:btemoshir@gmail.com" target="_blank" title="Email">
-        <i class="fa-solid fa-envelope"></i>
+        <i class="fas fa-envelope"></i>
       </a>
       <a href="https://scholar.google.com/citations?hl=en&user=gdtAvW8AAAAJ" target="_blank" title="Google Scholar">
-        <i class="fa-solid fa-graduation-cap"></i>
+        <i class="fas fa-graduation-cap"></i>
       </a>
     </div>
     <div class="text-links">
@@ -31,18 +32,19 @@
       <a href="https://orcid.org/0009-0001-3984-2593" target="_blank">ORCiD</a> |
       <a href="pdfs/CV_MoshirHarsh.pdf" target="_blank">CV</a>
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#nutshell">In a nutshell</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#address">Address</a></li>
-      </ul>
-      <div class="menu-toggle">☰</div>
-    </nav>
   </header>
+
+  <nav class="mobile-only">
+    <div class="menu-toggle">☰</div>
+    <ul class="nav-links">
+      <li><a href="#nutshell">In a nutshell</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#address">Address</a></li>
+    </ul>
+  </nav>
 
   <main>
     <section id="nutshell">
@@ -54,21 +56,99 @@
     <section id="experience">
       <div class="section-divider">✻</div>
       <h2>Research Experience</h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-entry">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <h3>Postdoctoral Researcher</h3>
+            <p><strong>Technical University Dortmund / University of Duisburg-Essen</strong><br />2024 – present</p>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <h3>PhD in Theoretical Physics</h3>
+            <p><strong>Georg-August-Universität Göttingen</strong><br />Jan. 2020 – March 2024</p>
+            <p>Part of IMPRS-PBCS<br />Grade: Magna cum Laude</p>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <h3>Research Intern</h3>
+            <p><strong>DESY Hamburg</strong><br />During Bachelor's studies</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="education">
       <div class="section-divider">✻</div>
       <h2>Education</h2>
+      <ul class="education-list">
+        <li><i class="fas fa-graduation-cap"></i> <strong>Georg-August-Universität Göttingen</strong><br />PhD in Theoretical Physics (2020–2024)<br />Magna cum Laude</li>
+        <li><i class="fas fa-graduation-cap"></i> <strong>Ecole normale supérieure, Paris</strong><br />MSc in Physics (2017–2019)</li>
+        <li><i class="fas fa-graduation-cap"></i> <strong>Indian Institute of Science, Bangalore</strong><br />BSc in Physics (2013–2017)</li>
+      </ul>
     </section>
 
     <section id="publications">
       <div class="section-divider">✻</div>
       <h2>Publications</h2>
+
+      <div class="publication">
+        <a href="https://arxiv.org/abs/2310.12022" target="_blank">
+          <strong>Exploiting memory effects to detect the boundaries of biochemical subnetworks</strong>
+        </a>
+        <p><em>Oct. 19, 2023</em><br />Authors: Moshir Harsh, Leonhard Götz Vulpius, Peter Sollich</p>
+        <button class="toggle-abstract">Show Abstract</button>
+        <div class="abstract-text">
+          Partial measurements of biochemical reaction networks are ubiquitous and limit our ability to reconstruct the topology of the reaction network and the strength of the interactions amongst both the observed and the unobserved molecular species... (full abstract here)
+        </div>
+      </div>
+
+      <div class="publication">
+        <a href="https://arxiv.org/abs/2303.00029" target="_blank">
+          <strong>Accurate dynamics from self-consistent memory in stochastic chemical reactions with small copy numbers</strong>
+        </a>
+        <p><em>May 2, 2023</em><br />Authors: Moshir Harsh, Peter Sollich</p>
+        <button class="toggle-abstract">Show Abstract</button>
+        <div class="abstract-text">
+          We present a method that captures the fluctuations beyond mean field in chemical reactions in the regime of small copy numbers... (full abstract here)
+        </div>
+      </div>
+
     </section>
 
     <section id="news">
       <div class="section-divider">✻</div>
       <h2>Recent News</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <h3>Graduation Ceremony</h3>
+          <p><em>Göttingen: 26 April, 2024</em><br />Bla bla</p>
+        </div>
+        <div class="news-card">
+          <h3>Annual Meeting of DPG</h3>
+          <p><em>Berlin: March 17–March 22, 2024</em><br />For the second time, I had the opportunity to attend this conference...</p>
+        </div>
+        <div class="news-card">
+          <h3>Physics of Complex Systems and Global Change</h3>
+          <p><em>Les Houches: March 10–15, 2024</em><br />By participating in this conference, I gained a profound insight into the complex interconnections...</p>
+        </div>
+        <div class="news-card">
+          <h3>PhD Defense</h3>
+          <p><em>Georg-August-Universität Göttingen: Feb 28, 2024</em><br />Graduating with the grade Magna cum Laude, I successfully defended my PhD in <em>Dynamics and Machine Learning Inference using Memory in Stochastic Biochemical Reaction Networks</em>.</p>
+        </div>
+        <div class="news-card">
+          <h3>International Max Planck Research School Excellence Fellowship</h3>
+          <p><em>Nov. 2021</em><br />I am grateful to have been awarded the International Max Planck Research School Excellence Fellowship to further enhance my doctoral research.</p>
+        </div>
+      </div>
     </section>
 
     <section id="address">
@@ -82,6 +162,7 @@
         Germany
       </address>
     </section>
+
   </main>
 </body>
 </html>
