@@ -1,1 +1,112 @@
-/* Dein Style.css - wie im vorigen Schritt besprochen */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.portrait {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem 0;
+}
+
+.icon-links a, .text-links a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: #555;
+  text-decoration: none;
+}
+
+nav {
+  margin-top: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.section-divider {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #999;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    left: 0;
+    border-top: 1px solid #ccc;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+.abstract-text {
+  display: none;
+  margin-top: 0.5rem;
+  color: #555;
+  text-align: left;
+}
+.abstract-text.visible {
+  display: block;
+}
