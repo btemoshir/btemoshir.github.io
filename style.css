@@ -210,3 +210,11 @@ address {
     display: flex;
   }
 }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
