@@ -216,9 +216,23 @@ address {
   width: 50%;
 }
 
+.column70 {
+  float: left;
+  width: 70%;
+}
+
+.column30 {
+  float: right;
+  width: 30%;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.abstract-text {
+  display: none;
 }
