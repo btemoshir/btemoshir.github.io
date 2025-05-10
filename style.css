@@ -210,6 +210,70 @@ address {
     display: flex;
   }
 }
+nav.top-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  justify-content: space-between; /* Space between rows */
+  align-items: center;
+}
+
+nav.top-nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav.top-nav a:hover {
+  color: #007acc;
+}
+
+nav.top-nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007acc;
+  margin-bottom: 0.5rem; /* Add spacing for small screens */
+}
+
+nav.top-nav .menu {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  nav.top-nav {
+    flex-direction: column; /* Stack items in two rows */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  nav.top-nav .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%; /* Full width for dropdown */
+  }
+
+  nav.top-nav .menu-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-self: flex-end; /* Align toggle to the right */
+  }
+
+  nav.top-nav.open .menu {
+    display: flex;
+    position: static; /* Remove absolute positioning */
+    background-color: transparent;
+    border-top: none;
+    padding: 0;
+  }
+
+  nav.top-nav.open .menu a {
+    margin: 0.5rem 0;
+    width: 100%; /* Full width for links */
+  }
+}
 
 .column {
   float: left;
