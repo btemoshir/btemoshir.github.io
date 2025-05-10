@@ -236,3 +236,13 @@ address {
 .abstract-text {
   display: none;
 }
+
+.column30.desktop-only {
+  display: none;
+}
+
+@media screen and (min-width: 720px) {
+  .column30.desktop-only {
+    display: block;
+  }
+}
