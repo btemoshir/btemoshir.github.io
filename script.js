@@ -3,7 +3,13 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navLinks.classList.toggle('visible');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('visible');
+    });
   });
 }
 
@@ -15,7 +21,7 @@ document.querySelectorAll('.toggle-abstract').forEach(button => {
   });
 });
 
-document.querySelectorAll('.toggle-abstract').forEach(button => {
+document.querySelectorAll('.toggle-details').forEach(button => {
   button.addEventListener('click', () => {
     const abstractText = button.nextElementSibling;
     if (abstractText.style.display === 'none' || !abstractText.style.display) {

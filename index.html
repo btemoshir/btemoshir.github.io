@@ -13,28 +13,61 @@
 </head>
 <body>
   <header>
-    <nav class="top-nav">
-      <ul style="display: flex; justify-content: flex-end; list-style: none; padding: 0; margin: 0;">
-      <li style="margin-left: 10px; border: 1px solid black; padding: 5px; border-radius: 5px;">
-        <a href="#nutshell" style="color: inherit; text-decoration: none;">In a nutshell</a>
+    <nav class="top-nav" style="position: fixed; top: 0; width: 100%; background-color: white; z-index: 1000; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+      <ul style="display: flex; justify-content: center; list-style: none; padding: 10px; margin: 0;">
+      <li style="margin-left: 5px; border: 1px solid gray; padding: 5px; border-radius: 5px;">
+        <a href="#about-me" style="color: gray; text-decoration: none;">About me</a>
       </li>
-      <li style="margin-left: 10px; border: 1px solid black; padding: 5px; border-radius: 5px;">
-        <a href="#experience" style="color: inherit; text-decoration: none;">Experience</a>
+      <li style="margin-left: 5px; border: 1px solid gray; padding: 2px; border-radius: 5px;">
+        <a href="#experience" style="color: gray; text-decoration: none;">Experience</a>
       </li>
-      <li style="margin-left: 10px; border: 1px solid black; padding: 5px; border-radius: 5px;">
-        <a href="#education" style="color: inherit; text-decoration: none;">Education</a>
+      <li style="margin-left: 5px; border: 1px solid gray; padding: 2px; border-radius: 5px;">
+        <a href="#education" style="color: gray; text-decoration: none;">Education</a>
       </li>
-      <li style="margin-left: 10px; border: 1px solid black; padding: 5px; border-radius: 5px;">
-        <a href="#publications" style="color: inherit; text-decoration: none;">Publications</a>
+      <li style="margin-left: 5px; border: 1px solid gray; padding: 2px; border-radius: 5px;">
+        <a href="#publications" style="color: gray; text-decoration: none;">Publications</a>
       </li>
-      <li style="margin-left: 10px; border: 1px solid black; padding: 5px; border-radius: 5px;">
-        <a href="#news" style="color: inherit; text-decoration: none;">News</a>
+      <li style="margin-left: 5px; border: 1px solid gray; padding: 2px; border-radius: 5px;">
+        <a href="#news" style="color: gray; text-decoration: none;">News</a>
       </li>
-      <li style="margin-left: 10px; border: 1px solid black; padding: 5px; border-radius: 5px;">
-        <a href="#address" style="color: inherit; text-decoration: none;">Address</a>
+      <li style="margin-left: 5px; border: 1px solid gray; padding: 2px; border-radius: 5px;">
+        <a href="#address" style="color: gray; text-decoration: none;">Address</a>
       </li>
       </ul>
     </nav>
+
+    <nav class="mobile-only" style="position: fixed; top: 0; width: 100%; background-color: white; z-index: 1000; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+      <div class="menu-toggle">☰</div>
+      <ul class="nav-links">
+      <li><a href="#about-me">About me</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#address">Address</a></li>
+      </ul>
+    </nav>
+
+    <!-- <nav class="mobile-only" style="position: fixed; top: 0; width: 100%; background-color: white; z-index: 1000; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+      <div class="menu-toggle">☰</div>
+      <ul class="nav-links">
+      <li><a href="#about-me" onclick="closeMenu()">About me</a></li>
+      <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+      <li><a href="#education" onclick="closeMenu()">Education</a></li>
+      <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+      <li><a href="#news" onclick="closeMenu()">News</a></li>
+      <li><a href="#address" onclick="closeMenu()">Address</a></li>
+      </ul>
+    </nav>
+    <script>
+      function closeMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.style.display = 'none';
+      }
+    </script> -->
+    
+    <section id="about-me">
+      <div style="padding: 20px;"></div>
     <h1>Moshir Harsh, Ph.D.</h1>
     <img src="images/portrait.jpeg" alt="Portrait of Moshir Harsh" class="portrait" />
     <p class="subtitle">Researcher | Artifical Intelligence | Computational Biology | Statistical Physics </p>
@@ -58,35 +91,26 @@
       <a href="https://orcid.org/0009-0001-3984-2593" target="_blank">ORCiD</a> |
       <a href="documents/CV_Harsh.pdf" target="_blank">CV</a>
     </div>
+  </section>
   </header>
-
-  <!-- <nav class="mobile-only">
-    <div class="menu-toggle">☰</div>
-    <ul class="nav-links">
-      <li><a href="#nutshell">In a nutshell</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#address">Address</a></li>
-    </ul>
-  </nav> -->
 
   <main>
     <section id="nutshell">
       <div class="section-divider">✻</div>
       <h2>In a nutshell</h2>
       <p>
-        I’m a postdoctoral researcher at <a href="https://hms.harvard.edu/" target="_blank">Harvard Medical School</a>, 
-        working in the <a href="https://www.sanderlab.org/#/" target="_blank">Sander Lab</a> on 
+        I’m a postdoctoral researcher at <a href="https://hms.harvard.edu/" target="_blank" style="text-decoration: underline; color: inherit;">Harvard Medical School</a>, 
+        working in the <a href="https://www.sanderlab.org/#/" target="_blank" style="text-decoration: underline; color: inherit;">Sander Lab</a> and the <a href="https://marks.hms.harvard.edu/" target="_blank" style="text-decoration: underline; color: inherit;">Marks Lab</a> on 
         developing AI methods for early clininical disease risk assesment 
         and for developing data-driven understanding of cellular processes, 
         especially pertaining to cancer using perturbtaion biology methods. </p> 
         My work combines ideas from statistical physics and machine learning to better
         understand how complex structure and function emerge from noisy high-dimensional biological data.
 
-        <p> Before joining Harvard, I was a postdoctoral researcher at the <a href="https://www.mpi-dortmund.mpg.de/" target="_blank">Max Planck Institute of Molecular Physiology</a> in Dortmund 
-        and at the <a href="https://ikim.nrw/" target="_blank">Institute for Artificial Intelligence in Medicine (IKIM)</a> in Essen in the respective groups of <a href="https://www.mpi-dortmund.mpg.de/research-groups/becker" target="_blank">Sidney Becker</a> and <a href="https://koesterlab.github.io/johannes.html" target="_blank">Johannes Köster</a>.
+        <p> Before joining Harvard, I was a postdoctoral researcher at the <a href="https://www.mpi-dortmund.mpg.de/" target="_blank" style="text-decoration: underline; color: inherit;">Max Planck Institute of Molecular Physiology</a> in Dortmund 
+        and at the <a href="https://ikim.nrw/" target="_blank" style="text-decoration: underline; color: inherit;">Institute for Artificial Intelligence in Medicine (IKIM)</a> in Essen in the respective groups of 
+        <a href="https://www.mpi-dortmund.mpg.de/research-groups/becker" target="_blank" style="text-decoration: underline; color: inherit;">Sidney Becker</a>
+        and <a href="https://koesterlab.github.io/johannes.html" target="_blank" style="text-decoration: underline; color: inherit;">Johannes Köster</a>.
         I led
         an interdisciplinary project on next-generation epitranscriptomic and epigenetic sequencing for <em>de-novo</em> detection of RNA and DNA modifications and for their use as early clinical biomarkers. 
         A particular focus of my
@@ -95,15 +119,15 @@
         insights.
 
         <p>
-        I completed my PhD in Statiscal Phyiscs and Machine Learning at the <a href="https://www.uni-goettingen.de/en/200460.html" target="_blank"> Institute for Theoretical Physics</a> at the
-        <a href="https://www.uni-goettingen.de/" target="_blank"> Georg-August-Universität Göttingen</a>, 
-        within the <a href="https://www.uni-goettingen.de/en/58718.html" target="_blank">IMPRS-PBCS</a>, supervised by <a href="https://www.uni-goettingen.de/en/588919.html" target="_blank"> Prof. Dr. Peter Sollich</a>.
+        I completed my PhD in Statiscal Phyiscs and Machine Learning at the <a href="https://www.uni-goettingen.de/en/200460.html" target="_blank" style="text-decoration: underline; color: inherit;"> Institute for Theoretical Physics</a> at the
+        <a href="https://www.uni-goettingen.de/" target="_blank" style="text-decoration: underline; color: inherit;"> Georg-August-Universität Göttingen</a>, 
+        within the <a href="https://www.uni-goettingen.de/en/58718.html" target="_blank" style="text-decoration: underline; color: inherit;">IMPRS-PBCS</a>, supervised by <a href="https://www.uni-goettingen.de/en/588919.html" target="_blank" style="text-decoration: underline; color: inherit;"> Prof. Dr. Peter Sollich</a>.
         My doctoral research centred on theory and applications of non-equilibrium statistical field theory and ML for memory-based inference in stochastic biochemical
         networks in the regime of large instrinsic noise. I developed methods that integrate past information to predict accurate system dynamics, reveal
         hidden structure, and detect boundaries in (partially) observed bio-chemical reaction networks. During this time, I also supervised students at
         various levels and took full responsibility for their research projects from design to evaluation.
         
-        <p> Feel free to explore my publications or reach out to forge new collaborations – I’d be happy
+        <p> Feel free to explore my <a href="#publications" style="text-decoration: underline; color: inherit;">publications</a> or <a href="mailto:btemoshir@gmail.com" style="text-decoration: underline; color: inherit;">reach out</a> to forge new collaborations – I’d be happy
         to connect. I’m especially drawn to problems where theory and data-driven applications
         meet, and where methods developed in physics and AI can help us ask and answer better questions about biology.
       </p>
@@ -541,7 +565,7 @@
       <div class="section-divider">✻</div>
       <h2>Address</h2>
         <div class="row">
-          <div class="column">
+          <div class="column50 desktop-only">
             <address>
               <h3>Harvard Medical School</h3>
               Dr. Moshir Harsh<br />
@@ -552,7 +576,7 @@
             </address>
           </div>
 
-          <div class="column">
+          <div class="column50 desktop-only">
             <address>
               <h3>Max Planck Institute</h3>
               Dr. Moshir Harsh<br />
@@ -563,6 +587,26 @@
             </address>
           </div>
         </div>
+
+          <div class="column100 mobile-only">
+            <address>
+              <i class="fas fa-building" style="margin-right: 8px;"></i> <h3 style="display: inline;">Harvard Medical School</h3> <br/>
+              Dr. Moshir Harsh<br />
+              210 Longwood Avenue<br />
+              Armenise Building, 6th Floor<br />
+              Boston, MA 02115<br />
+              United States
+            </address>
+            <address>
+              <i class="fas fa-building" style="margin-right: 8px;"></i> <h3 style="display: inline;">Max Planck Institute</h3> <br/>
+              Dr. Moshir Harsh<br />
+              Otto-Hahn-Str. 11<br />
+              Max Planck Institute of Molecular Physiology<br />
+              44227 Dortmund<br />
+              Germany
+            </address>
+          </div>
+
     </section>
 
   </main>

@@ -147,7 +147,8 @@ h2 {
   margin-top: 0.5rem;
   background: none;
   border: none;
-  color: #007acc;
+  color: #000;
+  text-decoration: underline;
   cursor: pointer;
   font-size: 0.9rem;
 }
@@ -206,10 +207,17 @@ address {
     font-weight: bold;
   }
 
+  .nav-links.visible {
+
+    display: flex;
+  
+  }
+
   nav.mobile-only.open .nav-links {
     display: flex;
   }
 }
+
 nav.top-nav {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
@@ -246,32 +254,41 @@ nav.top-nav .menu {
 @media screen and (max-width: 768px) {
   nav.top-nav {
     flex-direction: column; /* Stack items in two rows */
-    align-items: flex-start; /* Align items to the left */
+    align-items: center; /* Align items to the center */
   }
 
   nav.top-nav .menu {
     display: none;
     flex-direction: column;
     width: 100%; /* Full width for dropdown */
+    align-items: center; /* Center align menu items */
   }
 
   nav.top-nav .menu-toggle {
     font-size: 1.5rem;
     cursor: pointer;
-    align-self: flex-end; /* Align toggle to the right */
+    align-self: center; /* Center align toggle */
   }
 
   nav.top-nav.open .menu {
     display: flex;
-    position: static; /* Remove absolute positioning */
+    position: flex; /* Remove absolute positioning */
     background-color: transparent;
     border-top: none;
     padding: 0;
+    align-items: center; /* Center align menu items */
   }
 
   nav.top-nav.open .menu a {
     margin: 0.5rem 0;
     width: 100%; /* Full width for links */
+    text-align: center; /* Center align text */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav.top-nav {
+    display: none;
   }
 }
 
@@ -305,8 +322,41 @@ nav.top-nav .menu {
   display: none;
 }
 
+.column50 {
+  float: left;
+  width: 50%;
+}
+
+.column100 {
+  float: left;
+  width: 100%;
+}
+
 @media screen and (min-width: 720px) {
   .column30.desktop-only {
     display: block;
+  }
+}
+
+.column50.desktop-only {
+  display: none;
+  width: 50%;
+}
+
+@media screen and (min-width: 720px) {
+  .column50.desktop-only {
+    display: block;
+  }
+}
+
+.column100.mobile-only {
+  display: block;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+  .column100.mobile-only {
+    display: none; /* Hide the element when min-width is 720px or more */
   }
 }
